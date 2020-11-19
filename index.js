@@ -6,6 +6,8 @@ const routes = require('./routes/routes');
 
 const app = express();
 
+
+
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, '/public')));
@@ -113,6 +115,9 @@ app.get('/refresh_token', function(req, res) {
     });
 });
 
+app.get('/', routes.index);
+app.get('/login', routes.login)
+app.get('/register', routes.register)
 console.log('Listening on 8888');
 app.listen(8888);
 
