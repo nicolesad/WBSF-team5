@@ -3,14 +3,35 @@ const pug = require('pug');
 const bodyParser = require('body-parser');
 const path = require('path');
 const routes = require('./routes/routes');
-
 const app = express();
+const request = require('request');
+const cors = require('cors');
+const querystring = require('querystring');
+const cookieParser = require('cookie-parser');
 
-
+let client_id = '8957a412905c4361bfeae278e8bd261c';
+let client_secret = '94f5eaa8eee74fba876f7ed029b988a4';
+let redirect_url = 'localhost:8888/callback';
 
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, '/public')));
+
+var generateRandomString = function(length) {
+    var text = '';
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    for (var i = 0; i < length; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+};
+
+var stateKey = 'spotify_auth_state';
+
+app.use(express.static(__dirname + '/public'))
+    .use(cors())
+    .use(cookieParser());
 
 app.get('/login', function(req, res) {
 
