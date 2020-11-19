@@ -6,44 +6,9 @@ const routes = require('./routes/routes');
 
 const app = express();
 
-// app.set('view engine', 'pug');
-// app.set('views', __dirname + '/views');
-// app.use(express.static(path.join(__dirname, '/public')));
-//
-// const urlencodedParser = bodyParser.urlencoded({
-//     extended: true
-// });
-
-
-const request = require('request');
-var cors = require('cors');
-var querystring = require('querystring');
-var cookieParser = require('cookie-parser');
-
-var client_id = '8957a412905c4361bfeae278e8bd261c'; // Your client id
-var client_secret = '94f5eaa8eee74fba876f7ed029b988a4'; // Your secret
-var redirect_uri = 'localhost:8888/callback'; // Your redirect uri
-
-/**
- * Generates a random string containing numbers and letters
- * @param  {number} length The length of the string
- * @return {string} The generated string
- */
-var generateRandomString = function(length) {
-    var text = '';
-    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
-    for (var i = 0; i < length; i++) {
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-    return text;
-};
-
-var stateKey = 'spotify_auth_state';
-
-app.use(express.static(__dirname + '/public'))
-    .use(cors())
-    .use(cookieParser());
+app.set('view engine', 'pug');
+app.set('views', __dirname + '/views');
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/login', function(req, res) {
 
