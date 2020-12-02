@@ -52,7 +52,7 @@ app.get('/login', function(req, res) {
 
 app.get('/callback', function(req, res) {
 
-    // your application requests refresh and access tokens
+    // you r application requests refresh and access tokens
     // after checking the state parameter
 
     var code = req.query.code || null;
@@ -139,10 +139,10 @@ app.get('/refresh_token', function(req, res) {
 app.get('/', routes.index);
 app.get('/login', routes.login)
 app.get('/register', routes.register)
+app.get('/profile', routes.profile)
 console.log('Listening on 8888');
 app.listen(8888);
 
 
-// app.listen(3000);
 
 

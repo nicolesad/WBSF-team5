@@ -13,3 +13,8 @@ exports.register = (req, res) => {
         title: 'Register'
     });
 };
+exports.profile = (req, res)=> {
+    res.render('profile', {
+        title: 'Profile'
+    });
+};

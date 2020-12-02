@@ -1,21 +1,20 @@
 extends layout
 
 block content
-    body(class='login_background')
-      div(class='logo-pic')
-        img(class='logo' src='logo.png' height=102 width=300)
-      div(class='flex-container')
-        div(class='register')
-          img(class='login_img' src='music_logo(2).jpg' height=300 width=200)
-          h3=title
-          form(class='form' method='POST' action='/submitted')
-            p Username:
-                input(type='text' name='username')
-            p Password:
-                input(type='text' name='username')
-            p
-                input(type='submit' value='Register')
-            p
-                a(class='links' href='/login') Remembered you're credentials?
-    //footer
-    //  p Footer
+    div(id='logo-pic')
+      img(id='logo' src='logo.png' height=102 width=300)
+    div(class='flex-container')
+      div(id='register')
+        img(src='music_logo(2).jpg' height=300 width=200)
+        h3=title
+        form(id='form' method='POST' action='/submitted')
+          p Username:
+              input(type='text' name='username')
+          p Password:
+              input(type='text' name='username')
+          p
+              input(type='submit' value='Register')
+          p
+              a(class='links' href='/login') Remembered you're credentials?
+    footer
+      p Footer
