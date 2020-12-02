@@ -2,9 +2,21 @@ html{
 
 }
 
-body {
+nav{
+    float: right;
+    margin-right: 20px;
+}
+
+li{
+    margin-right: 20px;
+    border-radius: 3px;
+    border: 3px solid black;
+
+}
+
+.login_background {
     animation-name: backgroundColorPalette;
-    animation-duration: 10s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -41,7 +53,7 @@ li{
     background-color: blanchedalmond;
 
 }
-#register{
+.register{
     border: 5px solid black;
     border-radius: 50px;
     text-align: center;
@@ -50,9 +62,13 @@ li{
     height: 320px;
     padding: 30px;
     font-family: 'Fjalla One', sans-serif;
+    /*background-color: #666666;*/
+    background-color: #EBEBEB;
+    color: #000;
+
 }
 .flex-container{
-   display: flex;
+
 }
 
 input[type=text], select {
@@ -76,23 +92,26 @@ input[type=submit] {
     cursor: pointer;
 }
 
-img{
+.login_img{
     float: left;
     border-radius: 10px;
+    border: black solid 1px;
+
 }
 
-.links{
-    font-size: 10px;
+.links, a:visited{
+    font-size: 15px;
+    color: blue;
 }
 
-#logo-pic {
+.logo-pic {
     border: black 3px solid;
     height: 120px;
     background-color: black;
     border-radius: 5px;
 }
 
-#logo{
+.logo{
     padding: 10px;
 }
 
@@ -110,15 +129,15 @@ footer{
     0% {
         background: #ee6055;
     }
-    25% {
-        background: #60d394;
-    }
+    /*25% {*/
+    /*    background: #60d394;*/
+    /*}*/
     50% {
         background: #aaf683;
     }
-    75% {
-        background: #ffd97d;
-    }
+    /*75% {*/
+    /*    background: #ffd97d;*/
+    /*}*/
     100% {
         background: #ff9b85;
     }
