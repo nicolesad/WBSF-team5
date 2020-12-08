@@ -2,8 +2,10 @@ extends layout
 
 block content
     h3=title
+    div(class='username-error_message')
     p Username:
         input(type='text' name='username')
+    div(class='password-error_message')
     p Password:
         input(type='text' name='password')
     p

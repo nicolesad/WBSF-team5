@@ -9,14 +9,16 @@ block content
                 img(class='login_img' src='music_logo(2).jpg' height=300 width=200)
                 h3=title
                 form(class='form' method='POST' action='/submitted')
+                    div(class='email-error_message')
                     p Email:
                         input(type='text' name='email')
+                    div(class='username-error_message')
                     p Username:
                         input(type='text' name='username')
+                    div(class='password-error_message')
                     p Password:
                         input(type='text' name='password')
                     p
                         input(type='submit' value='Register')
-
     //footer
     //  p Footer
