@@ -2,13 +2,14 @@ extends layout
 
 block content
     h3=title
-    div(class='username-error_message')
-    p Username:
-        input(type='text' name='username')
-    div(class='password-error_message')
-    p Password:
-        input(type='text' name='password')
-    p
-        input(type='submit' value='Login')
-    p
-        a(class='links' href='/login') Remembered you're credentials?
+    form(method='POST' action='/profile')
+        div(class='username-error_message')
+        p Username (test):
+            input(type='text' name='username')
+        div(class='password-error_message')
+        p Password (test):
+            input(type='text' name='password')
+        p
+            input(type='submit' value='Login')
+        p
+            a(class='links' href='/login') Remembered your credentials?
