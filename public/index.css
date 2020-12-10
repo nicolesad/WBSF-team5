@@ -2,6 +2,19 @@ nav{
     float: right;
     margin-right: 20px;
 }
+.mySlides{
+    width: 20%;
+    height: 50%;
+    display: inline-block;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
 
 h2{
     text-align: center;
