@@ -1,6 +1,7 @@
 extends layout
 
 block content
+    link(href='/register.css' rel='stylesheet')
     body(class='login_background')
         div(class='logo-pic')
             img(class='logo' src='logo.png' height=102 width=300)
@@ -20,5 +21,6 @@ block content
                         input(type='text' name='password')
                     p
                         input(type='submit' value='Register')
+                        a(class='links' href='/login') Remembered your credentials?
     //footer
     //  p Footer

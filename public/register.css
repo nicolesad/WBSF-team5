@@ -2,24 +2,9 @@ html{
 
 }
 
-nav{
-    float: right;
-    margin-right: 20px;
-}
-
-li{
-    margin-right: 20px;
-    border-radius: 3px;
-    border: 3px solid black;
-
-}
-
-.login_background {
-    animation-name: backgroundColorPalette;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
+/*.login_background {*/
+/*    animation-name: AnimationName;*/
+/*}*/
 
 div{
 
@@ -47,10 +32,7 @@ form{
 
 li{
     /*border-width: 2px;*/
-    padding: 10px;
-    border-style: groove;
-    display: inline-block;
-    background-color: blanchedalmond;
+
 
 }
 .register{
@@ -125,20 +107,44 @@ footer{
     border-radius: 5px;
 }
 
-@keyframes backgroundColorPalette {
-    0% {
-        background: #ee6055;
-    }
-    /*25% {*/
-    /*    background: #60d394;*/
-    /*}*/
-    50% {
-        background: #aaf683;
-    }
-    /*75% {*/
-    /*    background: #ffd97d;*/
-    /*}*/
-    100% {
-        background: #ff9b85;
-    }
+/*@keyframes backgroundColorPalette {*/
+/*    0% {*/
+/*        background: #ee6055;*/
+/*    }*/
+/*    !*25% {*!*/
+/*    !*    background: #60d394;*!*/
+/*    !*}*!*/
+/*    50% {*/
+/*        background: #aaf683;*/
+/*    }*/
+/*    !*75% {*!*/
+/*    !*    background: #ffd97d;*!*/
+/*    !*}*!*/
+/*    100% {*/
+/*        background: #ff9b85;*/
+/*    }*/
+/*}*/
+.login_background {
+    background: linear-gradient(270deg, #00ffbd, #7000ff, #00ffe4);
+    background-size: 600% 600%;
+
+    -webkit-animation: RegisterAnimation 31s ease infinite;
+    -moz-animation: RegisterAnimation 31s ease infinite;
+    animation: RegisterAnimation 31s ease infinite;
+}
+
+@-webkit-keyframes RegisterAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes RegisterAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes RegisterAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
