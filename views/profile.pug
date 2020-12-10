@@ -1,9 +1,11 @@
 extends layout
 
 block content
-
+    link(href='/profile.css' rel='stylesheet')
     p You logged in, congrats!
-    a(href='/') Home
+    nav
+        li
+            a(href='/') Home
     div(class='profile-pic')
         img(class='profile' src='blank_profile_picture.png')
     //p  #{/*username of user*/}
