@@ -8,6 +8,11 @@ nav{
     display: inline-block;
 }
 
+.home{
+    margin-left: 550px;
+    margin-top: 150px;
+}
+
 .left{
     float: left;
 }
